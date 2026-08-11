@@ -33,6 +33,11 @@ export const metadata: Metadata = {
     "networking",
   ],
   authors: [{ name: "LARA" }],
+  icons: {
+    icon: "/brand/lara-image.png",
+    shortcut: "/brand/lara-image.png",
+    apple: "/brand/lara-image.png",
+  },
   openGraph: {
     title: "LARA — Where Exceptional People Meet",
     description:

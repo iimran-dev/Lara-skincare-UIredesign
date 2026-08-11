@@ -5,13 +5,9 @@ import { Statistics } from '@/components/lara/sections/statistics';
 import { FounderStory } from '@/components/lara/sections/founder-story';
 import { WhyLaraExists } from '@/components/lara/sections/why-lara-exists';
 import { Experience } from '@/components/lara/sections/experience';
-import { CommunityPreview } from '@/components/lara/sections/community-preview';
 import { MembershipJourney } from '@/components/lara/sections/membership-journey';
 import { InsideLara } from '@/components/lara/sections/inside-lara';
 import { LifestyleGallery } from '@/components/lara/sections/lifestyle-gallery';
-import { TrustPrivacy } from '@/components/lara/sections/trust-privacy';
-import { Events } from '@/components/lara/sections/events';
-import { MemberStories } from '@/components/lara/sections/member-stories';
 import { CompatibilityQuiz } from '@/components/lara/sections/compatibility-quiz';
 import { Waitlist } from '@/components/lara/sections/waitlist';
 import { FAQ } from '@/components/lara/sections/faq';
@@ -35,25 +31,13 @@ export default function Home() {
         <WhyLaraExists />
         {/* 06 — The Lara Experience */}
         <Experience />
-        {/* 07 — Community Preview */}
-        <section id="community" className="contents">
-          {/*<CommunityPreview />*/}
-        </section>
-        {/* 08 — Membership Journey */}
+        {/* 07 — Membership Journey */}
         <MembershipJourney />
-        {/* 09 — Inside Lara */}
+        {/* 08 — Inside Lara */}
         <InsideLara />
-        {/* 10 — Lifestyle Gallery */}
+        {/* 09 — Lifestyle Gallery */}
         <LifestyleGallery />
-
-        {/* 11 — Trust & Privacy */}
-        {/*<TrustPrivacy />*/}
-        {/* 12 — Events */}
-        {/*<Events />*/}
-        {/* 13 — Member Stories */}
-        {/*<MemberStories />*/} 
-
-        {/* 14 — Compatibility Quiz */}
+        {/* 10 — Compatibility Quiz */}
         <CompatibilityQuiz />
         {/* 15 — Waitlist & Invitation CTA */}
         <Waitlist />

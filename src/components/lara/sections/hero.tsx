@@ -124,7 +124,7 @@ export function Hero() {
             <div className="relative mx-auto max-w-[340px] sm:max-w-[420px] lg:max-w-none">
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-gold/25 bg-ink-soft shadow-2xl sm:rounded-3xl">
                 <motion.img
-                  src="/images/hero-person.jpg"
+                  src="/brand/mobile-banner.png"
                   alt="LARA Ambassador"
                   className="h-full w-full object-cover object-[center_20%]"
                   style={isDesktop ? { scale: imgScale, y: imgY } : undefined}
