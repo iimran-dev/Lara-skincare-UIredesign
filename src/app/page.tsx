@@ -14,7 +14,6 @@ import { Events } from '@/components/lara/sections/events';
 import { MemberStories } from '@/components/lara/sections/member-stories';
 import { CompatibilityQuiz } from '@/components/lara/sections/compatibility-quiz';
 import { Waitlist } from '@/components/lara/sections/waitlist';
-import { FinalCTA } from '@/components/lara/sections/final-cta';
 import { FAQ } from '@/components/lara/sections/faq';
 import { Footer } from '@/components/lara/sections/footer';
 import { MobileStickyCTA } from '@/components/lara/mobile-sticky-cta';
@@ -38,7 +37,7 @@ export default function Home() {
         <Experience />
         {/* 07 — Community Preview */}
         <section id="community" className="contents">
-          <CommunityPreview />
+          {/*<CommunityPreview />*/}
         </section>
         {/* 08 — Membership Journey */}
         <MembershipJourney />
@@ -46,18 +45,18 @@ export default function Home() {
         <InsideLara />
         {/* 10 — Lifestyle Gallery */}
         <LifestyleGallery />
+
         {/* 11 — Trust & Privacy */}
-        <TrustPrivacy />
+        {/*<TrustPrivacy />*/}
         {/* 12 — Events */}
-        <Events />
+        {/*<Events />*/}
         {/* 13 — Member Stories */}
-        <MemberStories />
+        {/*<MemberStories />*/} 
+
         {/* 14 — Compatibility Quiz */}
         <CompatibilityQuiz />
-        {/* 15 — Waitlist */}
+        {/* 15 — Waitlist & Invitation CTA */}
         <Waitlist />
-        {/* 16 — Final Invitation CTA */}
-        <FinalCTA />
         {/* FAQ */}
         <FAQ />
       </main>

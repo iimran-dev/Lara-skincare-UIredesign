@@ -14,7 +14,7 @@ export function FounderStory() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-emerald py-12 sm:py-16 lg:py-20"
+      className="relative overflow-hidden bg-emerald py-8 sm:py-16 lg:py-20"
     >
       {/* deep emerald ambient texture */}
       <div
@@ -25,12 +25,12 @@ export function FounderStory() {
             'radial-gradient(80% 60% at 80% 20%, rgba(200,161,90,0.08), transparent 60%), radial-gradient(60% 50% at 0% 100%, rgba(11,11,11,0.5), transparent 60%)',
         }}
       />
-      <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-12">
+      <div className="relative mx-auto grid max-w-[1400px] grid-cols-12 items-center gap-3.5 px-4 sm:gap-12 sm:px-8 lg:gap-16 lg:px-12">
         {/* Portrait Placeholder */}
-        <Reveal className="lg:col-span-5">
+        <Reveal className="col-span-5 w-full">
           <div className="relative">
             <motion.div
-              className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-gold/20 bg-gradient-to-b from-emerald-950/80 via-emerald-900/40 to-ink/90 p-8 flex flex-col items-center justify-center text-center shadow-2xl"
+              className="relative aspect-[4/5] overflow-hidden rounded-xl border border-gold/20 bg-gradient-to-b from-emerald-950/80 via-emerald-900/40 to-ink/90 p-3 flex flex-col items-center justify-center text-center shadow-xl sm:rounded-2xl sm:p-8"
               style={{ y: imgY }}
             >
               {/* Ambient radial glow inside placeholder */}
@@ -40,15 +40,15 @@ export function FounderStory() {
               />
 
               {/* Placeholder content */}
-              <div className="relative z-10 flex flex-col items-center gap-4">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full border border-gold/30 bg-gold/10 text-gold shadow-inner backdrop-blur-xs">
-                  <User className="h-9 w-9 stroke-[1.5]" />
+              <div className="relative z-10 flex flex-col items-center gap-2 sm:gap-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 bg-gold/10 text-gold shadow-inner backdrop-blur-xs sm:h-20 sm:w-20">
+                  <User className="h-4 w-4 stroke-[1.5] sm:h-9 sm:w-9" />
                 </div>
-                <div className="space-y-1">
-                  <span className="font-serif text-lg tracking-wide text-ivory">
+                <div className="space-y-0.5 sm:space-y-1">
+                  <span className="font-serif text-[11px] tracking-wide text-ivory sm:text-lg">
                     Founder Portrait
                   </span>
-                  <p className="text-xs font-light tracking-wider text-ivory-dim/70 uppercase">
+                  <p className="text-[8px] font-light tracking-wider text-ivory-dim/70 uppercase sm:text-xs">
                     Photo Placeholder
                   </p>
                 </div>
@@ -57,7 +57,7 @@ export function FounderStory() {
               {/* subtle gradient overlay */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-0 rounded-2xl"
+                className="pointer-events-none absolute inset-0 rounded-xl sm:rounded-2xl"
                 style={{
                   background:
                     'linear-gradient(180deg, transparent 50%, rgba(16,37,25,0.6) 100%)',
@@ -67,26 +67,26 @@ export function FounderStory() {
             {/* gold frame offset */}
             <div
               aria-hidden
-              className="absolute -bottom-3 -right-3 -z-10 h-full w-full rounded-2xl border border-gold/25"
+              className="absolute -bottom-1.5 -right-1.5 -z-10 h-full w-full rounded-xl border border-gold/25 sm:-bottom-3 sm:-right-3 sm:rounded-2xl"
             />
           </div>
         </Reveal>
 
         {/* Story */}
-        <div className="lg:col-span-7">
+        <div className="col-span-7">
           <Reveal>
-            <span className="eyebrow">The Founder</span>
+            <span className="eyebrow text-[9px] sm:text-xs">The Founder</span>
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h2 className="mt-5 font-serif text-[clamp(1.8rem,4vw,3rem)] font-light leading-[1.15] text-ivory">
+            <h2 className="mt-2 font-serif text-[clamp(0.95rem,3.2vw,3rem)] font-light leading-[1.18] text-ivory sm:mt-5 sm:leading-[1.15]">
               LARA began with a simple, stubborn belief —
               <span className="text-gold"> that connection deserves more care.</span>
             </h2>
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="mt-8 space-y-5 text-[14px] font-light leading-[1.95] text-ivory-dim sm:text-[15px]">
+            <div className="mt-3 space-y-2 text-[11px] font-light leading-[1.65] text-ivory-dim sm:mt-8 sm:space-y-5 sm:text-[15px] sm:leading-[1.95]">
               <p>
                 I spent years surrounded by remarkable people — founders,
                 doctors, artists, travellers — yet I watched them settle for
@@ -97,10 +97,9 @@ export function FounderStory() {
               <p>
                 LARA is the opposite of more. It is a room with fewer people,
                 better lit, where every introduction has been considered. Where
-                trust is not a feature but a precondition. Where the people you
-                meet share not just interests, but intent.
+                trust is not a feature but a precondition.
               </p>
-              <p>
+              <p className="hidden sm:block">
                 We do not scale by numbers. We scale by standards. And we believe
                 the right people are worth waiting for.
               </p>
@@ -108,23 +107,23 @@ export function FounderStory() {
           </Reveal>
 
           <Reveal delay={0.35}>
-            <div className="mt-10 flex items-end justify-between gap-6 border-t border-gold/15 pt-8">
+            <div className="mt-4 flex items-end justify-between gap-2 border-t border-gold/15 pt-3 sm:mt-10 sm:gap-6 sm:pt-8">
               <div>
-                <p className="font-serif text-2xl italic text-gold">
+                <p className="font-serif text-base italic text-gold sm:text-2xl">
                   Laxmi Rai.
                 </p>
-                <p className="mt-1 text-[11px] font-light uppercase tracking-[0.22em] text-ivory-muted">
+                <p className="mt-0.5 text-[8px] font-light uppercase tracking-[0.16em] text-ivory-muted sm:mt-1 sm:text-[11px] sm:tracking-[0.22em]">
                   Founder · LARA
                 </p>
               </div>
               {/* handwritten-style signature mark */}
               <svg
-                width="120"
-                height="48"
+                width="64"
+                height="26"
                 viewBox="0 0 120 48"
                 fill="none"
                 aria-hidden
-                className="opacity-70"
+                className="opacity-70 sm:h-[48px] sm:w-[120px]"
               >
                 <motion.path
                   d="M4 32 C 14 14, 24 14, 28 30 S 40 40, 48 22 C 54 10, 62 18, 60 30 C 58 38, 68 36, 76 24 C 82 16, 92 22, 88 32 C 86 38, 100 34, 116 18"

@@ -15,64 +15,43 @@ const CATEGORIES = [
 
 export function CommunityPreview() {
   return (
-    <section className="relative overflow-hidden bg-ink-soft py-12 sm:py-16 lg:py-20">
+    <section className="relative overflow-hidden bg-ink-soft py-8 sm:py-12">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-        <div className="mb-14 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-          <div className="max-w-xl">
+        <div className="mb-6 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
+          <div>
             <Reveal>
               <span className="eyebrow">The Community</span>
             </Reveal>
-            <Reveal delay={0.1}>
-              <h2 className="mt-5 font-serif text-[clamp(1.8rem,4.5vw,3.2rem)] font-light leading-[1.12] text-ivory">
-                A glimpse of who belongs.
+            <Reveal delay={0.08}>
+              <h2 className="mt-2 font-serif text-xl font-light text-ivory sm:text-2xl">
+                A glimpse of member crafts & cities.
               </h2>
             </Reveal>
-            <Reveal delay={0.2}>
-              <p className="mt-5 text-[14px] font-light leading-relaxed text-ivory-dim sm:text-[15px]">
-                We don't display member profiles. We share the calibre of people
-                you might one day meet — by craft, by city, by intention.
-              </p>
-            </Reveal>
           </div>
-          <Reveal delay={0.25}>
-            <span className="font-serif text-sm italic text-gold/60">
-              Identities reserved for members.
+          <Reveal delay={0.15}>
+            <span className="font-serif text-xs italic text-gold/60">
+              Identities private · Invitation only
             </span>
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-2 gap-px overflow-hidden border border-gold/15 bg-gold/10 sm:grid-cols-3 lg:grid-cols-4">
-          {CATEGORIES.map((c, i) => (
-            <Reveal key={c.role} delay={(i % 4) * 0.06}>
-              <article className="group relative h-full bg-ink px-5 py-10 transition-colors duration-500 hover:bg-emerald-soft/40 sm:px-7 sm:py-12">
-                {/* silhouette mark */}
-                <svg
-                  viewBox="0 0 40 48"
-                  className="mb-6 h-12 w-10 text-gold/30 transition-colors duration-500 group-hover:text-gold/60"
-                  fill="none"
-                  aria-hidden
-                >
-                  <circle cx="20" cy="13" r="9" stroke="currentColor" strokeWidth="1" />
-                  <path
-                    d="M4 46 C 4 32, 36 32, 36 46"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <h3 className="font-serif text-xl font-light text-ivory sm:text-2xl">
-                  {c.role}
-                </h3>
-                <p className="mt-2 text-[11px] font-light uppercase tracking-[0.24em] text-ivory-muted">
-                  {c.city}
-                </p>
-                <span className="absolute right-4 top-4 font-serif text-[11px] italic text-gold/30">
-                  {String(i + 1).padStart(2, '0')}
+        {/* Compact Pills Grid */}
+        <Reveal delay={0.2}>
+          <div className="flex flex-wrap gap-2.5 sm:gap-3">
+            {CATEGORIES.map((c) => (
+              <div
+                key={c.role}
+                className="group flex items-center gap-2.5 rounded-full border border-gold/20 bg-ink/70 px-4 py-2 text-xs transition-all duration-300 hover:border-gold/50 hover:bg-emerald-soft/40 sm:px-5 sm:py-2.5 sm:text-sm"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-gold/60 transition-colors group-hover:bg-gold" />
+                <span className="font-serif font-light text-ivory">{c.role}</span>
+                <span className="text-[10px] font-light uppercase tracking-wider text-ivory-muted">
+                  · {c.city}
                 </span>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -46,7 +46,7 @@ export function WhyLaraExists() {
   const lineScale = useTransform(scrollYProgress, [0.1, 0.7], [0, 1]);
 
   return (
-    <section className="relative overflow-hidden bg-ink py-12 sm:py-16 lg:py-20">
+    <section id="why-lara" className="relative overflow-hidden bg-ink py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         <div className="mb-14 max-w-2xl">
           <Reveal>

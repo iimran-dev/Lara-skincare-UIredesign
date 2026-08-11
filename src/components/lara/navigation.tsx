@@ -7,10 +7,11 @@ import { LaraLogo } from './lara-logo';
 
 const LINKS = [
   { label: 'About', href: '#manifesto' },
+  { label: 'Why LARA', href: '#why-lara' },
   { label: 'Experience', href: '#experience' },
   { label: 'Membership', href: '#journey' },
-  { label: 'Events', href: '#events' },
-  { label: 'Stories', href: '#stories' },
+  { label: 'Gallery', href: '#gallery' },
+  { label: 'Quiz', href: '#quiz' },
   { label: 'FAQ', href: '#faq' },
 ];
 
@@ -44,7 +45,7 @@ export function Navigation() {
             : 'border-b border-transparent bg-transparent'
         }`}
       >
-        <nav className="mx-auto flex h-[68px] max-w-[1400px] items-center justify-between px-5 sm:px-8 lg:px-12">
+        <nav className="mx-auto flex h-14 max-w-[1400px] items-center justify-between px-4 sm:h-[68px] sm:px-8 lg:px-12">
           <a href="#top" aria-label="LARA home" className="group">
             <LaraLogo animated={false} />
           </a>
@@ -82,11 +83,11 @@ export function Navigation() {
           {/* Mobile trigger */}
           <button
             onClick={() => setMenuOpen(true)}
-            className="flex items-center gap-2 text-ivory lg:hidden"
+            className="flex items-center gap-1.5 text-ivory lg:hidden"
             aria-label="Open menu"
           >
-            <span className="text-[11px] font-light tracking-[0.28em] uppercase">Menu</span>
-            <Menu className="h-5 w-5" strokeWidth={1.2} />
+            <span className="text-[10px] font-light tracking-[0.24em] uppercase">Menu</span>
+            <Menu className="h-4.5 w-4.5" strokeWidth={1.2} />
           </button>
         </nav>
       </motion.header>
@@ -113,7 +114,7 @@ function MobileMenu({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="fixed inset-0 z-[70] bg-ink lg:hidden"
+      className="fixed inset-0 z-[70] bg-ink lg:hidden overflow-y-auto"
     >
       {/* ambient gradient */}
       <div
@@ -124,52 +125,52 @@ function MobileMenu({
             'radial-gradient(90% 60% at 50% 0%, rgba(21,48,31,0.6), transparent 60%), radial-gradient(60% 40% at 100% 100%, rgba(200,161,90,0.08), transparent 60%)',
         }}
       />
-      <div className="relative flex h-full flex-col px-6 py-6">
+      <div className="relative flex min-h-full flex-col px-5 py-4">
         <div className="flex items-center justify-between">
           <LaraLogo animated={false} />
           <button
             onClick={onClose}
-            className="flex items-center gap-2 text-ivory"
+            className="flex items-center gap-1.5 text-ivory"
             aria-label="Close menu"
           >
-            <span className="text-[11px] font-light tracking-[0.28em] uppercase">Close</span>
-            <X className="h-5 w-5" strokeWidth={1.2} />
+            <span className="text-[10px] font-light tracking-[0.24em] uppercase">Close</span>
+            <X className="h-4.5 w-4.5" strokeWidth={1.2} />
           </button>
         </div>
 
-        <div className="gold-line my-8" />
+        <div className="gold-line my-4" />
 
-        <nav className="flex flex-1 flex-col justify-center gap-1">
+        <nav className="flex flex-1 flex-col justify-center gap-0.5">
           {links.map((l, i) => (
             <motion.a
               key={l.href}
               href={l.href}
               onClick={onClose}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + i * 0.06, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="group flex items-baseline justify-between border-b border-gold/10 py-5"
+              transition={{ delay: 0.05 + i * 0.04, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="group flex items-center justify-between border-b border-gold/10 py-3"
             >
-              <span className="font-serif text-4xl font-light text-ivory transition-colors group-hover:text-gold">
+              <span className="font-serif text-2xl font-light text-ivory transition-colors group-hover:text-gold">
                 {l.label}
               </span>
-              <span className="eyebrow text-gold/50">{String(i + 1).padStart(2, '0')}</span>
+              <span className="eyebrow text-[10px] text-gold/50">{String(i + 1).padStart(2, '0')}</span>
             </motion.a>
           ))}
         </nav>
 
-        <div className="mt-6 space-y-3">
+        <div className="mt-4 space-y-2 pb-4">
           <a
             href="#waitlist"
             onClick={onClose}
-            className="btn-gold block rounded-sm py-4 text-center text-[12px] font-medium tracking-[0.22em] uppercase"
+            className="btn-gold block rounded-sm py-3 text-center text-[11px] font-medium tracking-[0.2em] uppercase"
           >
             Request Invitation
           </a>
           <a
             href="#login"
             onClick={onClose}
-            className="block py-2 text-center text-[12px] font-light tracking-[0.2em] uppercase text-ivory-dim"
+            className="block py-1.5 text-center text-[11px] font-light tracking-[0.18em] uppercase text-ivory-dim"
           >
             Member Login
           </a>
