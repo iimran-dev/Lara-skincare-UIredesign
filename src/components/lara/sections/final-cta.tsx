@@ -12,7 +12,7 @@ export function FinalCTA() {
   const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.6, 0.9]);
 
   return (
-    <section ref={ref} className="relative flex min-h-[90vh] items-center overflow-hidden">
+    <section ref={ref} className="relative flex min-h-[60vh] items-center overflow-hidden">
       <motion.img
         src="/images/gallery-rooftop.jpg"
         alt="An elegant evening gathering"
@@ -36,7 +36,7 @@ export function FinalCTA() {
             'radial-gradient(60% 50% at 50% 50%, rgba(21,48,31,0.3), transparent 70%)',
         }}
       />
-      <div className="relative mx-auto w-full max-w-3xl px-5 py-32 text-center sm:px-8">
+      <div className="relative mx-auto w-full max-w-3xl px-5 py-16 text-center sm:px-8 sm:py-20">
         <Reveal>
           <span className="eyebrow inline-flex items-center gap-3">
             <span className="h-px w-8 bg-gold/50" />

@@ -36,7 +36,7 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative bg-ink py-24 sm:py-32 lg:py-40">
+    <section id="faq" className="relative bg-ink py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[1100px] px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">

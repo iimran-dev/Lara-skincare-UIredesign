@@ -13,7 +13,7 @@ const STATS = [
 
 export function Statistics() {
   return (
-    <section className="relative bg-ink py-20 sm:py-24">
+    <section className="relative bg-ink py-10 sm:py-12">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         <Reveal>
           <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
@@ -31,13 +31,17 @@ export function Statistics() {
 
         <div className="grid grid-cols-2 gap-px overflow-hidden border border-gold/15 bg-gold/10 sm:grid-cols-3 lg:grid-cols-5">
           {STATS.map((s, i) => (
-            <Reveal key={s.label} delay={i * 0.08}>
-              <div className="group relative h-full bg-ink-soft px-5 py-10 transition-colors duration-500 hover:bg-emerald-soft/40 sm:px-7 sm:py-12">
-                <div className="flex h-full flex-col">
-                  <span className="font-serif text-[clamp(2.4rem,5vw,3.6rem)] font-light leading-none text-ivory transition-colors duration-500 group-hover:text-gold">
+            <Reveal
+              key={s.label}
+              delay={i * 0.08}
+              className={`h-full ${i === 4 ? 'col-span-2 sm:col-span-1' : ''}`}
+            >
+              <div className="group relative flex h-full flex-col justify-between bg-ink-soft px-5 py-8 transition-colors duration-500 hover:bg-emerald-soft/40 sm:px-7 sm:py-12">
+                <div>
+                  <span className="font-serif text-[clamp(2.2rem,5vw,3.6rem)] font-light leading-none text-ivory transition-colors duration-500 group-hover:text-gold">
                     <Counter to={s.value} suffix={s.suffix} duration={2.2} />
                   </span>
-                  <span className="mt-4 text-[10px] font-light uppercase tracking-[0.24em] text-ivory-muted sm:text-[11px]">
+                  <span className="mt-3 block text-[10px] font-light uppercase tracking-[0.24em] text-ivory-muted sm:text-[11px]">
                     {s.label}
                   </span>
                 </div>

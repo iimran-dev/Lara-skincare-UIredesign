@@ -78,7 +78,7 @@ export function CompatibilityQuiz() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-ink py-24 sm:py-32 lg:py-40">
+    <section className="relative overflow-hidden bg-ink py-12 sm:py-16 lg:py-20">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"

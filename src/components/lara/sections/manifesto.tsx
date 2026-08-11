@@ -6,7 +6,7 @@ export function Manifesto() {
   return (
     <section
       id="manifesto"
-      className="relative overflow-hidden bg-ink py-28 sm:py-40 lg:py-52"
+      className="relative overflow-hidden bg-ink py-12 sm:py-16 lg:py-20"
     >
       {/* ambient emerald glow */}
       <div

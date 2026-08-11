@@ -14,7 +14,7 @@ const TRUST = [
 
 export function TrustPrivacy() {
   return (
-    <section className="relative overflow-hidden bg-emerald py-24 sm:py-32 lg:py-40">
+    <section className="relative overflow-hidden bg-emerald py-12 sm:py-16 lg:py-20">
       {/* ambient shield behind content */}
       <motion.svg
         aria-hidden

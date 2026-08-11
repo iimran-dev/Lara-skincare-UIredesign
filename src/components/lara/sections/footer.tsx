@@ -56,11 +56,11 @@ export function Footer() {
   };
 
   return (
-    <footer id="contact" className="relative overflow-hidden bg-ink-deep pt-20">
+    <footer id="contact" className="relative overflow-hidden bg-ink-deep pt-10">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         {/* Newsletter / Waitlist block */}
         <Reveal>
-          <div className="grid grid-cols-1 gap-10 border-b border-gold/15 pb-16 lg:grid-cols-2 lg:gap-16">
+          <div className="grid grid-cols-1 gap-10 border-b border-gold/15 pb-10 lg:grid-cols-2 lg:gap-16">
             <div>
               <span className="eyebrow">Stay Close</span>
               <h3 className="mt-5 font-serif text-[clamp(1.8rem,4vw,3rem)] font-light leading-[1.12] text-ivory">
@@ -93,7 +93,7 @@ export function Footer() {
         </Reveal>
 
         {/* Link columns */}
-        <div className="grid grid-cols-2 gap-10 py-16 sm:grid-cols-3 lg:grid-cols-6 lg:gap-8">
+        <div className="grid grid-cols-2 gap-10 py-10 sm:grid-cols-3 lg:grid-cols-6 lg:gap-8">
           <div className="col-span-2 lg:col-span-2">
             <LaraLogo animated={false} />
             <p className="mt-6 max-w-xs text-[13px] font-light leading-relaxed text-ivory-muted">

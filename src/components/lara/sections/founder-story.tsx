@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useTransform } from 'framer-motion';
+import { User } from 'lucide-react';
 import { useRef } from 'react';
 import { Reveal } from '../reveal';
 import { useElementScrollProgress } from '../use-element-scroll';
@@ -8,12 +9,12 @@ import { useElementScrollProgress } from '../use-element-scroll';
 export function FounderStory() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useElementScrollProgress(ref, 'start end', 'end start');
-  const imgY = useTransform(scrollYProgress, [0, 1], ['-8%', '8%']);
+  const imgY = useTransform(scrollYProgress, [0, 1], ['-6%', '6%']);
 
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-emerald py-24 sm:py-32 lg:py-40"
+      className="relative overflow-hidden bg-emerald py-12 sm:py-16 lg:py-20"
     >
       {/* deep emerald ambient texture */}
       <div
@@ -25,29 +26,48 @@ export function FounderStory() {
         }}
       />
       <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-12">
-        {/* Portrait */}
+        {/* Portrait Placeholder */}
         <Reveal className="lg:col-span-5">
           <div className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden border border-gold/15">
-              <motion.img
-                src="/images/founder.jpg"
-                alt="Portrait of LARA's founder"
-                className="h-full w-full object-cover"
-                style={{ y: imgY, scale: 1.1 }}
-              />
+            <motion.div
+              className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-gold/20 bg-gradient-to-b from-emerald-950/80 via-emerald-900/40 to-ink/90 p-8 flex flex-col items-center justify-center text-center shadow-2xl"
+              style={{ y: imgY }}
+            >
+              {/* Ambient radial glow inside placeholder */}
               <div
                 aria-hidden
-                className="absolute inset-0"
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(200,161,90,0.12),transparent_70%)]"
+              />
+
+              {/* Placeholder content */}
+              <div className="relative z-10 flex flex-col items-center gap-4">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full border border-gold/30 bg-gold/10 text-gold shadow-inner backdrop-blur-xs">
+                  <User className="h-9 w-9 stroke-[1.5]" />
+                </div>
+                <div className="space-y-1">
+                  <span className="font-serif text-lg tracking-wide text-ivory">
+                    Founder Portrait
+                  </span>
+                  <p className="text-xs font-light tracking-wider text-ivory-dim/70 uppercase">
+                    Photo Placeholder
+                  </p>
+                </div>
+              </div>
+
+              {/* subtle gradient overlay */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 rounded-2xl"
                 style={{
                   background:
                     'linear-gradient(180deg, transparent 50%, rgba(16,37,25,0.6) 100%)',
                 }}
               />
-            </div>
+            </motion.div>
             {/* gold frame offset */}
             <div
               aria-hidden
-              className="absolute -bottom-3 -right-3 -z-10 h-full w-full border border-gold/25"
+              className="absolute -bottom-3 -right-3 -z-10 h-full w-full rounded-2xl border border-gold/25"
             />
           </div>
         </Reveal>
@@ -91,7 +111,7 @@ export function FounderStory() {
             <div className="mt-10 flex items-end justify-between gap-6 border-t border-gold/15 pt-8">
               <div>
                 <p className="font-serif text-2xl italic text-gold">
-                  Laxmi R.
+                  Laxmi Rai.
                 </p>
                 <p className="mt-1 text-[11px] font-light uppercase tracking-[0.22em] text-ivory-muted">
                   Founder · LARA

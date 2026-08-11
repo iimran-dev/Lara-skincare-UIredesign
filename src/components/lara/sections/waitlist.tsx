@@ -33,7 +33,7 @@ export function Waitlist() {
   };
 
   return (
-    <section id="waitlist" className="relative overflow-hidden bg-emerald py-24 sm:py-32 lg:py-40">
+    <section id="waitlist" className="relative overflow-hidden bg-emerald py-12 sm:py-16 lg:py-20">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"

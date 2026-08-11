@@ -15,7 +15,7 @@ const CATEGORIES = [
 
 export function CommunityPreview() {
   return (
-    <section className="relative overflow-hidden bg-ink-soft py-24 sm:py-32 lg:py-40">
+    <section className="relative overflow-hidden bg-ink-soft py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         <div className="mb-14 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-xl">

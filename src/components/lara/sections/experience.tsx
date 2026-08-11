@@ -47,7 +47,7 @@ export function Experience() {
   return (
     <section id="experience" className="relative bg-ink">
       {/* Section header */}
-      <div className="mx-auto max-w-[1400px] px-5 pb-12 pt-24 sm:px-8 sm:pt-32 lg:px-12 lg:pb-16 lg:pt-40">
+      <div className="mx-auto max-w-[1400px] px-5 pb-6 pt-12 sm:px-8 sm:pt-16 lg:px-12 lg:pb-8 lg:pt-20">
         <div className="max-w-2xl">
           <Reveal>
             <span className="eyebrow">The LARA Experience</span>

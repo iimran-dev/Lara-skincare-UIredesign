@@ -20,7 +20,7 @@ export function MembershipJourney() {
   const lineScaleY = useTransform(scrollYProgress, [0.1, 0.7], [0, 1]);
 
   return (
-    <section id="journey" className="relative overflow-hidden bg-ink py-24 sm:py-32 lg:py-40">
+    <section id="journey" className="relative overflow-hidden bg-ink py-12 sm:py-16 lg:py-20">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"

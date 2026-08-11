@@ -28,7 +28,7 @@ const STORIES = [
 
 export function MemberStories() {
   return (
-    <section id="stories" className="relative overflow-hidden bg-ink-soft py-24 sm:py-32 lg:py-40">
+    <section id="stories" className="relative overflow-hidden bg-ink-soft py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
         <div className="mb-16 max-w-2xl">
           <Reveal>
